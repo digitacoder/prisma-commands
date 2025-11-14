@@ -124,3 +124,13 @@ npx prisma migrate deploy
 Applies the already-committed migrations to the target (staging/production) database. **Does not** create new migrations. This command is what your CI/CD or deployment scripts should run.
 
 ---
+
+## 11. Generate a SQL diff (advanced)
+
+```bash
+npx prisma migrate diff --from-schema-datamodel prisma/schema.prisma --to-schema-datamodel other_schema.prisma --script
+```
+
+Creates a SQL diff between two schemas or between a schema and a live DB. Useful for advanced auditing or custom migration pipelines.
+
+---
