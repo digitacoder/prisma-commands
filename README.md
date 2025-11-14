@@ -74,3 +74,13 @@ npx prisma db seed
 Seeds populate tables with initial or test data. Useful after a fresh migration or in CI for integration tests.
 
 ---
+
+## 6. Inspect / work with the DB via GUI
+
+```bash
+npx prisma studio
+```
+
+Opens Prisma Studio — a lightweight UI to browse and edit data in your development DB.
+
+---
