@@ -144,3 +144,15 @@ Creates a SQL diff between two schemas or between a schema and a live DB. Useful
 - Backup production DB before running migrations and test migrations in staging first.
 
 ---
+
+## 13. Example minimal workflow (dev → prod)
+
+1. Install Prisma and Prisma Client.
+2. Edit `schema.prisma` locally.
+3. `npx prisma migrate dev --name add-users`
+4. `npx prisma db seed` (optional)
+5. Commit `schema.prisma` + `prisma/migrations/` to git.
+6. CI builds and runs tests (include `npx prisma generate`).
+7. Deployment runs `npx prisma migrate deploy` against production DB, then restarts app.
+
+---
