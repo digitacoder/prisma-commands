@@ -94,3 +94,13 @@ npx prisma db pull
 Reads the schema from an existing DB and updates `schema.prisma` (useful when adopting Prisma for an existing project).
 
 ---
+
+## 8. Force-sync schema without migration files
+
+```bash
+npx prisma db push
+```
+
+Writes the `schema.prisma` to the DB directly **without** creating migration files. Handy for prototyping but **not** recommended for production workflows where migration history is important.
+
+---
