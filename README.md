@@ -40,3 +40,15 @@ npx prisma generate
 Generates (or regenerates) the Prisma Client JS/TS library used by your app to query the database. Run after changing `schema.prisma` or after installing/updating Prisma packages.
 
 ---
+
+## 4. Create & apply a migration (development)
+
+```bash
+npx prisma migrate dev --name <descriptive-name>
+```
+
+**What it does:** compares `schema.prisma` with the current DB, creates a migration SQL file under `prisma/migrations/`, and applies it to your development database.
+
+**When to use:** local development while building schema changes. The first migration is commonly named `init`. Like `npx prisma migrate dev --name init`
+
+---
