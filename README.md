@@ -2,6 +2,9 @@
 
 A Practical Prisma Workflow Step by Step | Prisma ORM | Prisma All Commands
 ---
+Rule to remember (very important)
+
+Edit schema.prisma → migrate → generate → restart dev server
 
 ## Prerequisite: Install Prisma and Prisma Client
 
