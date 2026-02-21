@@ -6,6 +6,22 @@ Rule to remember (very important)
 
 Edit schema.prisma → migrate → generate → restart dev server
 
+## Database Delete-Migrations, Reset, Migrate and Generate (Powershell)
+* Delete prisma migration folder 
+```powershell
+Remove-Item -Recurse -Force ".\prisma\migrations\*"
+```
+* Reset prisma database
+```powershell
+npx prisma migrate reset
+```
+* Generate prisma client and apply migration
+```powershell
+npx prisma migrate dev --name init
+```
+--- 
+ 
+
 ## Prerequisite: Install Prisma and Prisma Client
 
 ```bash
